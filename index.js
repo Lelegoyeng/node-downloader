@@ -1,8 +1,12 @@
 const Downloader = require("nodejs-file-downloader");
 const inquirer = require('inquirer');
+const showBanner = require('node-banner');
 
 
 const downloadFiles = async (link) => {
+
+    await showBanner('Lelegoyeng', 'Downlading Progress...');
+
     const downloader = new Downloader({
         // url: "http://212.183.159.230/200MB.zip",
         url: link,
